@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#nav-container {
+    width: 100%;
+    height: 108px;
+}
+
+.top-nav-wrap {
+
+    a {
+        font-size: 14px !important;
+        font-weight: 600;
+        letter-spacing: 8px;
+        color: black !important;
+        /* background-color: #F9D3D4; */    
+        border-left:2px solid #F8CE8E !important;
+        margin-left: -16px;
+        padding: 0 60px 0;
+    } 
+    
+    & a:hover {
+        width: auto;
+        text-align: justify;
+        vertical-align: middle;
+        background-color: #F9D3D4;
+        transition-delay: 0.3s;
+        transition: 0.5s;
+    }
+    
+    .nav-about-us {
+    border-right:2px solid #F8CE8E !important;
+    }
+
+}
+
+#about-jilai {
+    margin: 0 203px 0 !important;
+    // 整個關於我們的大版位置
+    .about-us-container {
+        width: 112%;
+        height: 920px;
+        background-color: #F1F0F0;
+        margin: 0 -50px 0;                     
+        // 包住早餐圖片和關於我們文字的容器
+        .card-container {
+            position: relative;
+            padding-top: 55px;
+
+            .card {
+                background-color: transparent;
+               
+            }
+            // 左邊圖片的區塊
+            .left-card {
+                width: 100%;
+                height: 799px;
+                background: url(../img/02-about_us/about-us-breakfirst-pic.jpg);
+                background-repeat: no-repeat; 
+                background-size: 62%;                
+                margin-left: -160px;
+            }
+            // 右邊關於我們的區塊
+            .right-card {                
+                position: absolute;                
+                top: calc(10% + 10px);
+                left: calc(50% + 20px);
+                
+                & .h4, p{
+                    font-weight: 600 !important;
+                }
+                // 關於我們的 hover 效果
+                .h4:hover {    
+                    width: 26% !important;      
+                    background-color: #F9D3D4;
+                    border-radius: 5px;                    
+                    transition-delay: 0.3s;
+                    transition: 0.5s;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+            }
+
+        }
+
+
+
+    }
+    
+}

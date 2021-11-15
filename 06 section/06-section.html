@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap4.6 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- animate.style CDN     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    #specialMenu {
+        background-image: url("./img/menu-specials-background.png");
+        background-size: contain;
+    }
+
+    .plate-round img {
+        position: fixed;
+        right: 70%;
+        top: 18%;
+    }
+
+    .card {
+        width: 33%;
+        border: none;
+        background-color: unset;
+    }
+    .card img:hover {
+        animation: pulse;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+    }
+	
+	
+	animation
+	
+</style>
+
+<body>
+    <main>
+
+        <section id="specialMenu" class="d-flex pt-5 px-5">
+            <div class="container col-12">
+                <div class="title-special">
+                    <div class="title-name">
+                        <h1 class="text-center font-weight-bolder">精選套餐</h1>
+                        <h5 class="text-center pb-5">somethings special</h5>
+                    </div>
+                    <div class="describe">
+                        <h5 class="text-center" style="width: 80%; margin: auto;">
+                            吉倈特選推薦餐點吉倈特選推薦餐點，吉倈特選推薦餐點吉倈特選推薦餐點吉倈特選推薦餐點，吉倈特選推薦餐點吉倈特選推薦餐點</h5>
+                    </div>
+                </div>
+                <div class="contents-pecials d-flex p-5">
+                    <div class="plate-round col-3 d-flex">
+                        <img src="./img/plate-go-round.png" id="js-logo" alt="">
+                    </div>
+                    <div class="jilaiSpecials col-9 d-flex flex-wrap">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        window.onscroll = function () {
+            var theta = document.documentElement.scrollTop / 100 % Math.PI;
+
+            document.getElementById('js-logo').style.transform = 'rotate(' + theta + 'rad)';
+        }
+
+        var jilaiSpecials = document.querySelector('.jilaiSpecials')
+
+        //使用for迴圈，將商品清單的資訊印在畫面上
+
+        var jilai_specials_product = [
+            {
+                img: './img/specials-img-01.png',
+                name: '吉倈特選推薦餐點一',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '111',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specials-img-02.png',
+                name: '吉倈特選推薦餐點二',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '222',
+                // tag1:'dessert'
+            },
+            {
+                img: './img/specials-img-03.png',
+                name: '吉倈特選推薦餐點三',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '333',
+                // tag1:'drink',
+                // tag2:'dessert'
+            },
+            {
+                img: './img/specials-img-04.png',
+                name: '吉倈特選推薦餐點四',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '444',
+                // tag1:'food'
+            },
+            {
+                img: './img/specials-img-05.png',
+                name: '吉倈特選推薦餐點五',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '555',
+                // tag1:'food'
+            },
+            {
+                img: './img/specials-img-06.png',
+                name: '吉倈特選推薦餐點六',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '666',
+                // tag1:'dessert'
+            },
+            {
+                img: './img/specials-img-07.png',
+                name: '吉倈特選推薦餐點七',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '777',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specials-img-08.png',
+                name: '吉倈特選推薦餐點八',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '888',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specials-img-09.png',
+                name: '吉倈特選推薦餐點九',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '999',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specials-img-10.png',
+                name: '吉倈特選推薦餐點十',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '010',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specials-img-11.png',
+                name: '吉倈特選推薦餐點十一',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '011',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specials-img-12.png',
+                name: '吉倈特選推薦餐點十二',
+                content: '我是吉倈特選推薦餐點的內容，內容超豐富的，大家快來試試看',
+                price: '012',
+                // tag1:'drink'
+            }
+        ]
+
+        function show(rule) {
+            jilaiSpecials.innerHTML = ''
+            //將資料庫裡的資訊，導入卡片中(element)( 先做1 )
+            for (let index = 0; index < jilai_specials_product.length; index++) {
+                const element = jilai_specials_product[index];
+                // 在印出來之前先做比較( 過濾 再做2 )
+                if (rule == 'all') {
+                    jilaiSpecials.innerHTML += ` 
+                    <div class="card col-lg-4 col-md-6 col-sm-12 text-center mb-3">
+                        <img src="${element.img}" alt="">
+                        <h6 class="name font-weight-bolder mb-3">${element.name}</h6>
+                        <div class="ingredients mb-2" style="width: 80%; margin: auto;">${element.content}</div>
+                    </div>`
+                }
+            }
+        }
+        // 先把價格拿掉若要加上架格再加上下方這列
+        // <div class="price font-weight-bolder">${element.price}</div> 
+
+
+        // 依按鈕來濾出同分類的產品並顯示(後做)
+        show('all')
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
