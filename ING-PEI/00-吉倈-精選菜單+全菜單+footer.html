@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap4.6 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- animate.style CDN     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- bootstrap icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 以下為精選菜單 */
+
+    #specialMenu {
+        background-image: url("./img/specialMenu/menu-specials-background.png");
+        background-size: contain;
+    }
+/* 
+    .plate-round {
+        overflow: hidden;
+    } */
+
+    #js-logo {
+        position: fixed;
+        top: 150px;
+        left: -400px;
+    }
+
+    .card {
+        width: 33%;
+        border: none;
+        background-color: unset;
+    }
+
+    .card img:hover {
+        animation: pulse;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    /* 以下為全版菜單 */
+    .menu-img>img {
+        width: 100%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        animation: fadeInUpBig;
+        animation-duration: 1s;
+        animation-iteration-count: initial;
+    }
+
+    .lineGroup {
+        width: 100%;
+    }
+
+    .lineGroup>.container {
+        background-color: #3ace01;
+        justify-content: space-evenly;
+    }
+
+    .logos>p>img {
+        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
+    }
+
+    .join-button>.btn {
+        font-size: 32px;
+        border: 2px solid;
+        border-radius: 40px;
+    }
+
+    /* 以下為footer */
+    #footer {
+        background-image: url(./img/footer/footer-background.jpg);
+        width: 100%;
+        height: 38.5vw;
+        background-size: cover;
+        position: relative;
+        min-width: 500px;
+    }
+
+    #footer>.container {
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    #footer>.container>a {
+        text-decoration: none;
+        width: 120px;
+        height: 120px;
+        background-color: #9c6c4f;
+        border-radius: 50%;
+        position: absolute;
+        right: 10%;
+        top: -60px;
+        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4));
+    }
+
+    .copy-right {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    /* bootstrap 4.6 layour width xl(≥1200px) lg(≥992px) md(≥768px) sm(≥576px) xs(<576px) */
+    @media screen and (max-width: 1500px) {
+        #js-logo {
+        width: 750px;
+        top: 150px;
+        left: -300px;
+
+    }
+    }
+
+
+    @media screen and (max-width: 1200px) {
+        #js-logo {
+        width: 680px;
+        top: 150px;
+        left: -300px;
+    }
+        /* foot */
+        .footer-logo>img {
+            width: 300px;
+            transition: 0.5s;
+        }
+
+        .icon-delivery>img,
+        .icon-social>img {
+            width: 80px;
+            transition: 0.5s;
+        }
+
+        #footer>.container>a {
+            width: 110px;
+            height: 110px;
+            right: 10%;
+            top: -45px;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        #js-logo {
+        width: 580px;
+        top: 150px;
+        left: -270px;
+    }
+
+        /* LINE粉絲團連結 */
+        .logos>p>img {
+            height: 80px;
+        }
+
+        .join-button>.btn {
+            font-size: 28px;
+        }
+
+        /* footer */
+        .footer-logo>img {
+            width: 200px;
+        }
+
+        .icon-delivery>img,
+        .icon-social>img {
+            width: 60px;
+        }
+
+        #footer>.container>a {
+            width: 90px;
+            height: 90px;
+            right: 10%;
+            top: -20px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        #js-logo {
+        width: 480px;
+        top: 180px;
+        left: -200px;
+    }
+        /* LINE粉絲團連結 */
+        .logos>p>img {
+            height: 70px;
+        }
+
+        .join-button>.btn {
+            font-size: 22px;
+        }
+
+        /* footer */
+        .footer-logo>img {
+            width: 150px;
+        }
+
+        .icon-delivery>img,
+        .icon-social>img {
+            width: 50px;
+        }
+
+        #footer>.container>a {
+            width: 80px;
+            height: 80px;
+            right: 10%;
+            top: -20px;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        #js-logo {
+        width: 400px;
+        left: -220px;
+    }
+    .card {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+        /* LINE粉絲團連結 */
+        .logos>p>img {
+            height: 60px;
+        }
+
+        .join-button>.btn {
+            font-size: 20px;
+        }
+
+        /* footer */
+        .footer-logo {
+            display: block;
+            width: 100%;
+            position: relative;
+        }
+
+        .footer-logo>img {
+            width: 120px;
+            margin: auto;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .icon-delivery>img,
+        .icon-social>img {
+            width: 45px;
+        }
+
+        .copy-right {
+            font-size: 16px;
+            margin-bottom: 0;
+            transition: 0.5s;
+        }
+
+        #footer>.container>a {
+            width: 70px;
+            height: 70px;
+            right: 10%;
+            top: -20px;
+        }
+    }
+</style>
+
+<body>
+
+    <main>
+        <!-- 精選菜單 -->
+
+        <section id="specialMenu" class="d-flex pt-5 px-5">
+            <div class="container col-12">
+                <div class="title-special">
+                    <div class="title-name">
+                        <h1 class="display-4 text-center font-weight-bolder">精選套餐</h1>
+                        <div class="title-special-line text-center mb-4">
+                            <img src="./img/specialMenu/menu-specials-taitle-line.png" alt="">
+                        </div>
+                        <!-- <h5 class="text-center pb-5">somethings special</h5> -->
+                    </div>
+                    <div class="describe">
+                        <h4 class="text-center" style="width: 80%; margin: auto;">
+                            吉倈特選經典套餐 開啟美好的一天</h5>
+                    </div>
+                </div>
+                <div class="contents-specials d-flex p-sm-5">
+                    <div class="plate-round col-3 d-flex">
+                        <img src="./img/specialMenu/plate-go-round.png" id="js-logo" alt="">
+                    </div>
+                    <div class="jilaiSpecials col-9 d-flex flex-wrap">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 以下為全版菜單 -->
+        <section id="allMenu" class="py-4 py-lg-5">
+            <div class="container flex-row px-0">
+                <!-- <div class="title-menu">
+                    <div class="title-name ">
+                        <h1 class="text-center font-weight-bolder">菜單總覽</h1>
+                        <h5 class="text-center pb-5">overview of the menu</h5>
+                    </div>
+                </div> -->
+                <div class="menu-img d-flex justify-content-center mb-4 mb-lg-5">
+                    <img src="./img/allMenu/allmenu.jpg" alt="">
+                </div>
+            </div>
+            <!-- LINE粉絲團連結 -->
+            <div class="lineGroup d-flex justify-content-center align-items-center">
+                <div class="container d-flex align-items-center row">
+                    <div class="logos col-lg-auto col-md-12 col-sm-12 text-center p-0 my-4 my-lg-5 mb-3 mb-lg-5 ">
+                        <p class="m-0 font-weight-bolder text-white">
+                            <img class="mr-4 " style="border-radius: 10px;" src="./img/allMenu/logo-01.png" alt="">X
+                            <img class="ml-4" style="border-radius: 10px;" src="./img/allMenu/logo-02.png" alt="">
+                        </p>
+                    </div>
+                    <div class="join-button mb-3 mb-lg-0">
+                        <button type="button" class="btn btn-outline-light font-weight-bolder">
+                            <i class="bi bi-caret-right-fill"></i>立即加入吉倈LINE粉絲團</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 以下為footer -->
+    <footer>
+        <section id="footer">
+            <div class="container col-12 d-flex flex-wrap align-items-center">
+                <a class="d-flex justify-content-center align-items-center " href="#">
+                    <h5 class="gotop text-white text-center">
+                        TOP
+                    </h5>
+                </a>
+                <div class="footer-logo">
+                    <img src="./img/footer/footer-logo.png" alt="">
+                </div>
+                <div class="icon-delivery">
+                    <img src="./img/footer/icon-delivery-01.png" alt="">
+                    <img class="mx-1 mx-md-2 mx-sm-3" src="./img/footer/icon-delivery-02.png" alt="">
+                    <img src="./img/footer/icon-delivery-03.png" alt="">
+                </div>
+                <div class="icon-social">
+                    <img src="./img/footer/icon-social-01.png" alt="">
+                    <img class="mx-1 mx-md-2 mx-sm-3" src="./img/footer/icon-social-02.png" alt="">
+                    <img src="./img/footer/icon-social-03.png" alt="">
+                </div>
+            </div>
+            <h5 class="copy-right text-white">© Jilai All Rights Reserved.</h6>
+
+
+
+        </section>
+
+    </footer>
+
+    </main>
+
+    <script>
+
+        // 精選菜單區
+
+        // 盤子轉圈的效果-Part. 01-訂好盤子出現的開始位置與結束位置
+        var jsLogo = document.querySelector('#js-logo');
+        var allMenu = document.querySelector('#allMenu');
+
+        function checkOffset() {
+            function getRectTop(el) {
+                var rect = el.getBoundingClientRect();
+                return rect.top;
+                // var rect = el.getBoundingClientRect();
+                // el.getBoundingClientRect() 回傳元素的大小，以及其相對於可視範圍 (viewport) 的位置。
+                // return rect.top-回傳從el向上算的值
+            }
+            if ((getRectTop(jsLogo) + document.body.scrollTop) + jsLogo.offsetHeight >= (getRectTop(allMenu) + document.body.scrollTop))
+                jsLogo.style.position = 'absolute';
+            // getRectTop(jsLogo) jsLogo元素左上角的位置， document.body.scrollTop通常為0可看網站介紹，jsLogo.offsetHeight-元素的高度
+            if (document.body.scrollTop + window.innerHeight < (getRectTop(allMenu) + document.body.scrollTop))
+                jsLogo.style.position = 'fixed'; // restore when you scroll up
+            // window.innerHeight-顯示區的高度
+            // jsLogo.innerHTML = document.body.scrollTop + window.innerHeight;
+        }
+
+        document.addEventListener("scroll", function () {
+            checkOffset();
+        });
+
+        // 盤子轉圈的效果-Part. 02-讓盤子轉起來
+        window.onscroll = function () {
+            var theta = document.documentElement.scrollTop / 150 % Math.PI;
+
+            document.getElementById('js-logo').style.transform = 'rotate(' + theta + 'rad)';
+        }
+
+
+        // 精選菜單的卡片
+        var jilaiSpecials = document.querySelector('.jilaiSpecials')
+
+        //使用for迴圈，將商品清單的資訊印在畫面上
+
+        var jilai_specials_product = [
+            {
+                img: './img/specialMenu/specials-img-01.png',
+                name: '奶油培根德腸麵套餐',
+                content: '香濃法式奶油白醬佐培根德腸',
+                // price: '111',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specialMenu/specials-img-02.png',
+                name: '厚片套餐',
+                content: '烤的外酥內軟果醬厚片搭配薯條和小熱狗',
+                // price: '222',
+                // tag1:'dessert'
+            },
+            {
+                img: './img/specialMenu/specials-img-03.png',
+                name: '經典套餐',
+                content: '可口小三明治，配上豬肉薯條的經典選擇',
+                // price: '333',
+                // tag1:'drink',
+                // tag2:'dessert'
+            },
+            {
+                img: './img/specialMenu/specials-img-04.png',
+                name: '歐姆蛋套餐',
+                content: '濃郁可口起司歐姆蛋，搭配果醬吐司和薯條',
+                // price: '444',
+                // tag1:'food'
+            },
+            {
+                img: './img/specialMenu/specials-img-05.png',
+                name: '中式套餐',
+                content: '傳統的好味道饕客最愛',
+                // price: '555',
+                // tag1:'food'
+            },
+            {
+                img: './img/specialMenu/specials-img-06.png',
+                name: '鬆餅套餐',
+                content: '美式圓鬆餅淋上蜂蜜，甜甜好滋味搭配豬肉和薯條',
+                // price: '666',
+                // tag1:'dessert'
+            },
+            {
+                img: './img/specialMenu/specials-img-07.png',
+                name: '活力組合餐',
+                content: '活力滿滿的幸福早餐，香蒜法國麵包、嫩蛋、生菜沙拉搭配檸檬雞柳',
+                // price: '777',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specialMenu/specials-img-08.png',
+                name: '蛋餅套餐',
+                content: '口感香酥的脆皮蛋餅，薯餅和地瓜QQ球，三種口味一次滿足',
+                // price: '888',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specialMenu/specials-img-09.png',
+                name: '總匯套餐',
+                content: '四層總匯吐司營養滿分，加上薯條小點心',
+                // price: '999',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specialMenu/specials-img-10.png',
+                name: '寶貝兒童餐',
+                content: '果醬小麵包、小熱狗、玉米蛋，孩子們的最愛',
+                // price: '010',
+                // tag1:'drink'
+            },
+            {
+                img: './img/specialMenu/specials-img-11.png',
+                name: '美式大牛起司堡套餐',
+                content: '厚切大牛的味覺饗宴，就在此刻擁有',
+                // price: '011',
+                // tag1:'drink'
+            },
+            {
+                img: '',
+                name: '',
+                content: '',
+                price: '',
+                // tag1:''
+            }
+        ]
+
+        function show(rule) {
+            jilaiSpecials.innerHTML = ''
+            //將資料庫裡的資訊，導入卡片中(element)( 先做1 )
+            for (let index = 0; index < jilai_specials_product.length; index++) {
+                const element = jilai_specials_product[index];
+                // 在印出來之前先做比較( 過濾 再做2 )
+                if (rule == 'all') {
+                    jilaiSpecials.innerHTML += ` 
+                    <div class="card col-lg-4 col-md-6 col-sm-12 text-center mb-3">
+                        <img src="${element.img}" alt="">
+                        <h4 class="name font-weight-bolder">${element.name}</h6>
+                        <div class="ingredients mb-2 mx-auto" style="width: 70%;">${element.content}</div>
+                    </div>`
+                }
+            }
+        }
+        // 先把價格拿掉若要加上架格再加上下方這列
+        // <div class="price font-weight-bolder">${element.price}</div> 
+
+
+        // 依按鈕來濾出同分類的產品並顯示(後做)
+        show('all')
+
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
