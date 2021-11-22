@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: darkgrey;
+}
+
+.container{
+    width: 1295px;
+    height: 925px;
+}
+
+.left {
+    width: 440px;
+    height: 275px;
+}
+
+.right {
+    width: 620px;
+    height: 150px;
+    background: white;
+    margin: auto;
+}
+
+.right-text {
+    margin: 30px;
+    letter-spacing: 10px;
+    line-height: 2px;
+}
