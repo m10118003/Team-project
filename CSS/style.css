@@ -7,7 +7,6 @@
 html,
 body {
   height: 100%;
-  position: relative;
   margin: 0;
   padding: 0;
 }
@@ -99,7 +98,7 @@ body {
   .top-nav-wrap .collapse .nav-about {
     border-right: 2px solid white !important;
   }
-  .navbar-link {
+  .nav-link {
     margin: 0 !important;
   }
 }
@@ -506,9 +505,10 @@ body {
 }
 
 #canvas-container .txtA {
-  width: 1280px;
+  width: 100%;
   height: 622.8px;
   background-image: url(../img/04-tasty_promise/good_morning.png);
+  background-repeat: no-repeat;
   margin: 0 0 0 100px;
   position: absolute;
   top: -15vh;
@@ -924,7 +924,7 @@ body {
     margin-bottom: -30vmin !important;
   }
   .ag-slide-block {
-    width: 700px;
+    width: 100%;
     margin: 0;
   }
   .snack-container {
@@ -1089,7 +1089,6 @@ body {
 #footer {
   background-image: url(../img/footer/footer-background.jpg);
   width: 100%;
-  min-width: 500px;
   height: 38.5vw;
   background-size: cover;
   position: relative;
@@ -1263,12 +1262,22 @@ body {
   }
 }
 
+@media screen and (max-width: 540px) {
+  #footer {
+    overflow: hidden;
+  }
+  #footer .gotop-ball {
+    margin-top: 5vmin !important;
+  }
+}
+
 .map-box {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .map-box .map-container {
-  width: 1295px;
+  overflow: hidden !important;
+  width: 80%;
   height: 925px;
   background-color: darkgrey;
   border-radius: 5px;
@@ -1313,7 +1322,13 @@ body {
 
 @media screen and (max-width: 1580px) {
   .map-container {
-    margin-left: 10vmin !important;
+    margin-left: 5vmin !important;
+  }
+  .map-container .map-right {
+    margin-top: 5vmin !important;
+  }
+  .map_rwd {
+    width: 80% !important;
   }
 }
 
@@ -1323,9 +1338,20 @@ body {
   }
 }
 
+@media screen and (max-width: 1343px) {
+  .map-container {
+    margin-left: 5vmin !important;
+  }
+  .map-container .map-right {
+    margin-top: 5vmin !important;
+    margin-left: -4vmin !important;
+  }
+}
+
 @media screen and (max-width: 1290px) {
   .map-row .map-right {
-    margin-left: 5vmin !important;
+    margin-top: -2vmin !important;
+    margin-left: 0vmin !important;
   }
   .map-row .map-right .map-right-text h5 {
     font-size: 1rem !important;
@@ -1367,18 +1393,18 @@ body {
     margin-top: 2vmin;
   }
   .map .map_rwd {
-    width: 60% !important;
+    width: 70% !important;
   }
 }
 
 @media screen and (max-width: 860px) {
   .map .map_rwd {
-    width: 35% !important;
+    width: 75% !important;
   }
 }
 
 @media screen and (max-width: 540px) {
   .map .map_rwd {
-    width: 25% !important;
+    width: 75% !important;
   }
 }

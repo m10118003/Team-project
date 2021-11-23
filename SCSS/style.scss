@@ -1,11 +1,10 @@
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  
 }
 html,
 body {
 height: 100%;
-position: relative;
 margin: 0;
 padding: 0;
 }
@@ -120,7 +119,7 @@ padding: 0;
       }
     }
   }
-  .navbar-link {
+  .nav-link {
     margin: 0 !important;
   }
 }
@@ -185,6 +184,7 @@ padding: 0;
     }
   }
 }
+
 #about-jilai {
   margin: 5vh 0 0 !important;
   // 整個關於我們的大版位置
@@ -633,6 +633,8 @@ padding: 0;
     width: 100%;
     height: 200px;
   }
+  // 隱藏多出來的邊
+
   // 微笑笑臉圖案位置
   .text-top > img {
     margin-left: 76vw;
@@ -643,9 +645,10 @@ padding: 0;
   }
   // Good morning 的 Good
   .txtA {
-    width: 1280px;
+    width: 100%;
     height: 622.8px;
     background-image: url(../img/04-tasty_promise/good_morning.png);
+    background-repeat: no-repeat;
     margin: 0 0 0 100px;
     position: absolute;
     top: -15vh;  
@@ -1089,7 +1092,7 @@ padding: 0;
     margin-bottom: -30vmin !important;
   }
     .ag-slide-block {
-        width: 700px;
+        width: 100%;
         margin: 0;
     }
     .snack-container{
@@ -1246,10 +1249,10 @@ padding: 0;
   }
 
     /* 以下為footer */
-  #footer {
+  #footer {      
       background-image: url(../img/footer/footer-background.jpg);
       width: 100%;
-      min-width: 500px;
+      // min-width: 500px;
       height: 38.5vw;
       background-size: cover;
       position: relative;
@@ -1442,11 +1445,21 @@ padding: 0;
           top: -20px;
       }
   }
+  @media screen and (max-width: 540px) {
+    #footer {
+      overflow: hidden;
+
+      .gotop-ball {
+        margin-top: 5vmin !important;
+      }
+    }
+  }
 // 交通資訊
 .map-box {
-  overflow: hidden;
+  overflow: hidden !important;
   .map-container {
-      width: 1295px;
+    overflow: hidden !important;
+      width: 80%;
       height: 925px;
       background-color: darkgrey;
       border-radius: 5px;
@@ -1499,20 +1512,34 @@ padding: 0;
 }
 @media screen and (max-width: 1580px) {
   .map-container {
-    margin-left: 10vmin !important;  
+    margin-left: 5vmin !important;
+    .map-right  {
+      margin-top: 5vmin !important;
+   }  
   }
-
+  .map_rwd {
+    width: 80% !important;      
+  }
 }
 @media screen and (max-width: 1380px) {
-  .map-container {
-    margin-left: 5vmin !important;  
+  .map-container {    
+    margin-left: 5vmin !important;
   }
-
+}
+@media screen and (max-width: 1343px) {
+  .map-container {        
+    margin-left: 5vmin !important;
+    .map-right {
+      margin-top: 5vmin !important;
+      margin-left: -4vmin !important;
+  }
+}
 }
 @media screen and (max-width: 1290px) {
   .map-row {
     .map-right {
-      margin-left: 5vmin !important;
+      margin-top: -2vmin !important;      
+      margin-left: 0vmin !important;
     
       .map-right-text {
         h5 {
@@ -1564,21 +1591,21 @@ padding: 0;
   .map { 
     margin-top: 2vmin;     
   .map_rwd {
-    width: 60% !important;
+    width: 70% !important;
   }
   }
 }
 @media screen and (max-width: 860px){
   .map {     
     .map_rwd {
-      width: 35% !important;
+      width: 75% !important;
     }
   }
 }
 @media screen and (max-width: 540px){
   .map {     
     .map_rwd {
-      width: 25% !important;
+      width: 75% !important;
     }
   }
 }
