@@ -468,6 +468,12 @@ body {
   }
 }
 
+@media all and (max-width: 360px) {
+  .store-intro-container {
+    height: 450px !important;
+  }
+}
+
 #canvas-container {
   overflow: hidden;
   margin-top: 50px;
@@ -667,7 +673,7 @@ body {
 
 @media screen and (max-width: 360px) {
   #canvas-container .text-cafe p.txt {
-    font-size: 16px !important;
+    font-size: 15px !important;
     margin: 10px 0 0 0px;
     padding: 5px;
     width: 650px;
@@ -1281,6 +1287,30 @@ body {
   }
 }
 
+@media screen and (max-width: 360px) {
+  #footer {
+    overflow: hidden;
+  }
+  #footer .gotop-ball {
+    margin-top: 7vmin !important;
+  }
+  #footer .footer-logo > img {
+    margin-top: -5vmin !important;
+  }
+  #footer .icon-delivery {
+    margin-left: -40vmin !important;
+  }
+  #footer .icon-social {
+    display: none;
+  }
+  #footer .copy-right {
+    width: 100%;
+    font-size: 0.1rem !important;
+    margin-left: 58vmin;
+    transition: 0.5s;
+  }
+}
+
 .map-box {
   overflow: hidden !important;
 }
@@ -1431,9 +1461,13 @@ body {
 @media screen and (max-width: 360px) {
   .map-container {
     width: 90% !important;
+    margin-bottom: -40vmin !important;
   }
   .map-container .map-left {
-    margin-left: -20vmin !important;
+    margin-left: -12vmin !important;
+  }
+  .map-container .map-left h1 {
+    margin-top: 5vmin;
   }
   .map-container .map .map_rwd {
     width: 90% !important;

@@ -620,6 +620,11 @@ padding: 0;
     margin-bottom: -15vh !important;
   }
 }
+@media all and (max-width: 360px) {
+  .store-intro-container {
+    height: 450px !important;    
+  }
+}
 // 美味承諾部分
 #canvas-container {
   overflow: hidden;
@@ -854,7 +859,7 @@ padding: 0;
     .text-cafe {
         
       p.txt {
-        font-size: 16px !important;      
+        font-size: 15px !important;      
         margin: 10px 0 0 0px;
         padding: 5px;
         width: 650px;
@@ -1487,6 +1492,32 @@ padding: 0;
       }
     }
   }
+  @media screen and (max-width: 360px) {
+    #footer {
+      overflow: hidden;
+      .gotop-ball {
+        margin-top: 7vmin !important;        
+      }
+      .footer-logo>img {
+        margin-top: -5vmin !important;
+      }
+      .icon-delivery {
+        margin-left: -40vmin !important;
+      }
+      .icon-social {
+        display: none;
+      }
+      .copy-right {
+        width: 100%;
+        font-size: 0.1rem !important;
+        margin-left: 58vmin;
+        transition: 0.5s;
+    }
+    }
+  }
+
+
+
 // 交通資訊
 .map-box {
   overflow: hidden !important;
@@ -1653,9 +1684,13 @@ padding: 0;
 }
 @media screen and (max-width: 360px){
   .map-container {
-    width: 90% !important;  
+    width: 90% !important; 
+    margin-bottom: -40vmin !important; 
     .map-left {     
-        margin-left: -20vmin !important;    
+        margin-left: -12vmin !important;
+        h1 {
+          margin-top: 5vmin;
+        }    
     }
     .map {     
       .map_rwd {
