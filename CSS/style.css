@@ -457,7 +457,7 @@ body {
 @media all and (max-width: 600px) {
   .store-intro-container {
     height: 600px !important;
-    margin-bottom: -15vh !important;
+    margin-bottom: -10vh !important;
   }
 }
 
@@ -666,7 +666,7 @@ body {
 
 @media screen and (max-width: 360px) {
   #canvas-container .text-cafe p.txt {
-    font-size: 15px !important;
+    font-size: 14px !important;
     margin: 10px 0 0 0px;
     padding: 5px;
     width: 650px;
