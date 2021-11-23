@@ -1399,12 +1399,24 @@ body {
 
 @media screen and (max-width: 860px) {
   .map .map_rwd {
-    width: 75% !important;
+    width: 92% !important;
   }
 }
 
 @media screen and (max-width: 540px) {
+  .map-left {
+    margin-left: -9vmin !important;
+  }
   .map .map_rwd {
-    width: 75% !important;
+    width: 87% !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .map-left {
+    margin-left: -20vmin !important;
+  }
+  .map .map_rwd {
+    width: 87% !important;
   }
 }
