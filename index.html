@@ -1,42 +1,774 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <title>吉倈早餐</title>
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <!-- bootstrap 4.6.1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="Styles.css">
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Swiper 7 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!-- AOS 動畫效果套件 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- animate.style CDN     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- 預留到時候可以引入 -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- fontawesome 字體圖標工具 -->
+    <link href="fontawesome-free-5.15.3-web/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-<section>
-    <div class="container    ">
-        <div class="row ">
-            <div class="left d-flex align-items-center justify-content-center" >
-                <h1>吉倈早餐</h1>
+    <div class="banner-container w-100" alt="banner_here">
+        <div class="banner-box">
+            <div class="banner">
+                <div class="banner-logo-container">
+                    <div class="banner-logo" alt="logo"></div>
+                </div>
             </div>
-            <div class="right">
-                <div class="right-text">
-                    <h4>聯絡電話：02-2506 0208</h4>
-                    <h4>營業時間：每日早上06：00 -中午12：00</h4>
-                    <h4>營業地址：台北市中山區五常街53巷35號</h4>
+        </div>
+
+
+        <!-- <img class="banner-pic w-100" src="./img/01-banner/banner-50.jpg" alt="banner_here"> -->
+        <!-- 導覽列 -->
+        <div id="nav-container" class="top-nav-wrap d-flex justify-content-lg-center">
+            <nav class="navbar navbar-expand-lg navbar-light" role="navigation">
+                <!-- 變版漢堡排 -->
+                <button class="navbar-toggler bg-white" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- 會以這個為軸(變版時) -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav d-lg-flex text-center">
+                        <li class="nav-item active">
+                            <a class="navbar-link nav-about" href="#very-special">用餐特色</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="navbar-link nav-about" href="#shop-here">店內環境 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="navbar-link nav-about" href="#specialMenu">餐點特色</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="navbar-link nav-about-us" href="#about-jilai">關於我們</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 關於我們 -->
+    <div id="about-jilai" class="about-us-jilai d-flex py-5">
+        <div class="about-us-container col-12 p-0 d-flex justify-content-start align-items-center">
+            <div class="card-container col-12 px-0 d-md-flex justify-content-center align-items-center my-5">
+                <div class="card-img" data-aos="fade-right" data-aos-offset="120" data-aos-delay="900"
+                    data-aos-duration="1000">
+                    <img src="./img/02-about_us/about-us-breakfirst-pic.png">
+                </div>
+                <div class="card right-card border-0   aos-init aos-animate" style="width: 100%;">
+                    <div class="text-container d-flex  flex-column justify-content-center align-items-center ">
+                        <h4 data-aos="fade-in" data-aos-offset="120" data-aos-delay="400" data-aos-duration="800"
+                            class="text h4 mb-lg-5">關於我們</h4>
+                        <div data-aos="fade-left" data-aos-offset="120" data-aos-delay="800" data-aos-duration="1000"
+                            data-aos-easing="ease-in-out" class="text-content d-flex justify-content-center px-4 py-3">
+                            <p class="text">
+                                從轉角小攤位到搬進新店面，近年再大力整修翻新，可以看到不管是上一代父母在草創期用心經營，還是到二代兒子接棒改革挑戰傳統早餐店升級轉型，激活出繁榮的早餐店商圈，有著 22
+                                年歷史的吉倈，一直用心致力於給顧客更多更好的美味餐點選擇、用餐服務體驗、優質用餐環境，為社區營造更好的早餐地圖和氣氛。讓吃早餐這件事，不再是都市繁忙下被忽略的小事，而是啟動擁有美好一天的大事。
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.0489856456225!2d121.5375679149592!3d25.066328783957225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abfd018c857f%3A0x368d8a76fd30db7f!2z5ZCJ5YCI5pep6aSQ!5e0!3m2!1szh-TW!2stw!4v1637533286914!5m2!1szh-TW!2stw" width="1125px" height="580px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- 店家介紹 -->
+    <div class="store-intro my-5 py-5">
+        <div class="store-intro-container pt-5">
+            <div data-aos="fade-down-right" data-aos-offset="120" data-aos-delay="700" data-aos-duration="1000"
+                data-aos-easing="ease-in-out" class="left-lobe-container">
+                <div class="left-lobe"></div>
+            </div>
+            <div class="store-inside-container">
+                <div data-aos="fade-down" data-aos-offset="120" data-aos-delay="700" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out" class="store-inside"></div>
+            </div>
+            <div class="store-bar-container">
+                <div data-aos="fade-up" data-aos-offset="120" data-aos-delay="700" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out" id="shop-here" class="store-bar"></div>
+            </div>
+            <div class="welcome-container d-lg-flex">
+                <div data-aos="fade-up-right" data-aos-offset="120" data-aos-delay="400" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out" class="left-welcome align-self-lg-end"></div>
+                <div data-aos="fade-up-left" data-aos-offset="120" data-aos-delay="400" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out" class="right-shop-logo align-self-lg-end"></div>
+            </div>
+            <div data-aos="fade-down-left" data-aos-offset="120" data-aos-delay="700" data-aos-duration="1000"
+                data-aos-easing="ease-in-out" class="right-lobe-container">
+                <div class="right-lobe"></div>
+            </div>
         </div>
     </div>
-</section>
+    <!-- 美味承諾 -->
+    <div id="canvas-container">
+        <div class="text-top">
+            <div data-aos="fade-down" data-aos-offset="120" data-aos-delay="400" data-aos-duration="800" class="txtA">
+            </div>
+            <img data-aos="fade-in" data-aos-offset="120" data-aos-delay="400" data-aos-duration="800" class="smile"
+                src="./img/04-tasty_promise/smile-1.png" alt="smile_face">
+        </div>
+        <div data-aos="fade-up-left" data-aos-offset="120" data-aos-delay="400" data-aos-duration="800"
+            class="canvas-logo">
+            <img src="./img/04-tasty_promise/LOGO去背圖.png" alt="Jilai_logo">
+        </div>
 
-<!-- Boostrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        <div data-aos="fade-up" data-aos-offset="120" data-aos-delay="400" data-aos-duration="800" class="text-cafe">
+            <p class="txt">“調配一杯暖暖的咖啡，為您拉開早晨的序幕”...</p>
+            <!-- <p class="txt2">...</p> -->
+        </div>
+
+        <canvas id="sineCanvas" width="1434" height="300"></canvas>
+    </div>
+
+    <!-- 美味承諾_Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./img/04-tasty_promise/nice_coffee_bean.png" alt="精選咖啡豆">
+                <div class="txt">
+                    <h2>精選咖啡豆</h2>
+                    <p>精選JASCAFFE咖啡豆-Opera 500 <br>
+                        獨樹一格的風味 香氣成熟穩重<br>
+                        口感層次豐富 喉韻帶甜</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/04-tasty_promise/s_bucks_level.png" alt="星巴克同級咖啡機">
+                <div class="txt">
+                    <h2>星巴克同級咖啡機</h2>
+                    <p>瑞士Thermoplan高階全自動咖啡機<br>
+                        星巴克同款機型 最好的瑞士工藝<br>
+                        精密全不鏽鋼沖泡組可精準萃取咖啡</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/04-tasty_promise/handmade_salad.png" alt="自製沙拉">
+                <div class="txt">
+                    <h2>自製沙拉</h2>
+                    <p>吉倈堅持自製沙拉抹醬<br>
+                        不添加防腐劑 少糖 不甜膩更健康</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/04-tasty_promise/天然食材.png" alt="美味食材">
+                <div class="txt">
+                    <h2>美味食材</h2>
+                    <p>老闆精心挑選各式食材配方<br>
+                        用心給顧客更好的味蕾享受</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/04-tasty_promise/nice_coffee_bean.png" alt="精選咖啡豆">
+                <div class="txt">
+                    <h2>精選咖啡豆</h2>
+                    <p>精選 JASCAFFE 咖啡豆-Opera 500 <br>
+                        獨樹一格的風味 香氣成熟穩重<br>
+                        口感層次豐富 喉韻帶甜</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/04-tasty_promise/s_bucks_level.png" alt="星巴克同級咖啡機">
+                <div class="txt">
+                    <h2>星巴克同級咖啡機</h2>
+                    <p>瑞士Thermoplan高階全自動咖啡機<br>
+                        星巴克同款機型 最好的瑞士工藝<br>
+                        精密全不鏽鋼沖泡組可精準萃取咖啡</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/04-tasty_promise/handmade_salad.png" alt="自製沙拉">
+                <div class="txt">
+                    <h2>自製沙拉</h2>
+                    <p>吉倈堅持自製沙拉抹醬<br>
+                        不添加防腐劑 少糖 不甜膩更健康</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/04-tasty_promise/天然食材.png" alt="美味食材">
+                <div class="txt">
+                    <h2>美味食材</h2>
+                    <p>老闆精心挑選各式食材配方<br>
+                        用心給顧客更好的味蕾享受</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+    <main>
+        <!-- 精選套餐 -->
+        <section id="specialMenu" class="d-flex pt-5 px-5">
+            <div class="container col-12">
+                <div class="title-special">
+                    <div class="title-name">
+                        <h1 data-aos="fade-down" data-aos-offset="120" data-aos-delay="400" data-aos-duration="800"
+                            class="display-4 text-center font-weight-bolder">精選套餐</h1>
+                        <div data-aos="flip-right" data-aos-offset="120" data-aos-delay="600" data-aos-duration="800"
+                            class="title-special-line text-center mb-4">
+                            <img src="./img/05_special_menu/menu-specials-taitle-line.png" alt="精選套餐">
+                        </div>
+                        <!-- <h5 class="text-center pb-5">somethings special</h5> -->
+                    </div>
+                    <div data-aos="fade-up" data-aos-offset="120" data-aos-delay="800" data-aos-duration="800"
+                        class="describe">
+                        <h4 class="text-center" style="width: 80%; margin: auto;">
+                            吉倈特選經典套餐 開啟美好的一天</h5>
+                    </div>
+                </div>
+                <div class="contents-specials d-flex p-sm-5">
+                    <div class="plate-round col-3 d-flex">
+                        <img src="./img/05_special_menu/plate-go-round.png" id="js-logo"
+                            alt="Special_menu_line_texture">
+                    </div>
+                    <div data-aos="flip-left" data-aos-offset="120" data-aos-delay="400" data-aos-duration="800"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                        class="jilaiSpecials col-9 d-flex flex-wrap">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 美味點心 -->
+        <!-- Swiper -->
+        <section id="very-special" class="snack-container">
+            <div class="left">
+                <div class="snack-menu">
+                    <div class="menu-text1 ">
+                        <h1>our menu</h1>
+                    </div>
+                    <div class="menu-text2">
+                        獨一無二的吉倈<br>
+                        和最新鮮美味的餐點
+                    </div>
+                    <div class="menu-button" type="button">
+                        <a class="menu-text" href="#menu-place" style="text-decoration:none;">
+                            隆重呈獻
+                        </a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="menu_swiper"
+                    style="display:flex;align-items: center;justify-content: center;margin-left:30px;margin-right: 30px;">
+                    <i class="fas fa-angle-left" style="font-size: 30px;cursor: pointer;"
+                        onclick="document.querySelector('.swiper-container').swiper.slidePrev()"></i>
+                    <section class="ag-slide-block ">
+                        <div class="swiper-container">
+                            <ul class="swiper-wrapper ag-slide_list">
+                                <li class="swiper-slide ag-slide_item" data-swiper-autoplay="1500"
+                                    data-swiper-slide-index="0">
+                                    <img src="./img/06_yummy_snack/snack-img-01.jpg" class="ag-slide_img" alt="">
+                                    <div class="ag-slide_info clearfix">
+                                        <div class="ag-slide-info_descr">
+                                            <h6 class="ag-slide-info_title">最新鮮美味的餐點</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide ag-slide_item" data-swiper-autoplay="1500"
+                                    data-swiper-slide-index="1">
+                                    <img src="./img/06_yummy_snack/snack-img-02.jpg" class="ag-slide_img" alt="">
+                                    <div class="ag-slide_info clearfix">
+                                        <div class="ag-slide-info_descr">
+                                            <h6 class="ag-slide-info_title">最新鮮美味的餐點</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide ag-slide_item" data-swiper-autoplay="1500"
+                                    data-swiper-slide-index="2">
+                                    <img src="./img/06_yummy_snack/snack-img-03.jpg" class="ag-slide_img" alt="">
+                                    <div class="ag-slide_info clearfix">
+                                        <div class="ag-slide-info_descr">
+                                            <h6 class="ag-slide-info_title">最新鮮美味的餐點</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide ag-slide_item" data-swiper-autoplay="1500"
+                                    data-swiper-slide-index="3">
+                                    <img src="./img/06_yummy_snack/snack-img-04.jpg" class="ag-slide_img" alt="">
+                                    <div class="ag-slide_info clearfix">
+                                        <div class="ag-slide-info_descr">
+                                            <h6 class="ag-slide-info_title">最新鮮美味的餐點</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide ag-slide_item" data-swiper-autoplay="1500"
+                                    data-swiper-slide-index="4">
+                                    <img src="./img/06_yummy_snack/snack-img-05.jpg" class="ag-slide_img" alt="">
+                                    <div class="ag-slide_info clearfix">
+                                        <div class="ag-slide-info_descr">
+                                            <h6 class="ag-slide-info_title">最新鮮美味的餐點</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ag-slide_item swiper-slide swiper-slide-prev" data-swiper-autoplay="1500"
+                                    data-swiper-slide-index="5">
+                                    <img src="./img/06_yummy_snack/snack-img-06.jpg" class="ag-slide_img" alt="">
+                                    <div class="ag-slide_info clearfix">
+                                        <div class="ag-slide-info_descr">
+                                            <h6 class="ag-slide-info_title">最新鮮美味的餐點</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <i class="fas fa-angle-right" style="font-size: 30px;cursor: pointer;"
+                        onclick=" document.querySelector('.swiper-container').swiper.slideNext()"></i>
+                </div>
+            </div>
+        </section>
+        <!-- 以下為菜單總覽 -->
+        <section id="allMenu" class="py-4 py-lg-5">
+            <div class="container flex-row px-0">
+                <!-- <div class="title-menu">
+                    <div class="title-name ">
+                        <h1 class="text-center font-weight-bolder">菜單總覽</h1>
+                        <h5 class="text-center pb-5">overview of the menu</h5>
+                    </div>
+                </div> -->
+                <div data-aos="fade-up" data-aos-offset="120" data-aos-delay="1000" data-aos-duration="1000" id="menu-place"
+                    class="menu-img d-flex justify-content-center mb-4 mb-lg-5">
+                    <img src="./img/07_all_menu/allmenu.jpg" alt="菜單總覽 ">
+                </div>
+            </div>
+            <!-- LINE粉絲團連結 -->
+            <div id="lineGroup" class="lineGroup d-flex justify-content-center align-items-center">
+                <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="800" data-aos-offset="120"
+                    class="container d-flex align-items-center row pb-0">
+                    <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000"
+                        data-aos-offset="120"
+                        class="logos col-lg-auto col-md-12 col-sm-12 text-center p-0 mb-0 my-4 my-lg-5 mb-3 mb-lg-5">
+                        <p class="m-0 font-weight-bolder text-white">
+                            <img class="mr-4 " style="border-radius: 10px;" src="./img/07_all_menu/logo-01.png" alt="">X
+                            <img class="ml-4" style="border-radius: 10px;" src="./img/07_all_menu/logo-02.png" alt="">
+                        </p>
+                    </div>
+                    <div class="join-button mb-3 mb-lg-0">
+                        <a href="https://spot.line.me/detail/458773706097827759" type="button" -
+                            class="btn btn-outline-light font-weight-bolder">
+                            <i class="bi bi-caret-right-fill"></i>立即加入吉倈LINE粉絲團</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 交通資訊 -->
+    <section>
+        <div class="map-box">
+            <div class="map-container">
+                <div class="map-row row">
+                    <div class="map-left d-flex align-items-center justify-content-center">
+                        <h1>吉倈早餐</h1>
+                    </div>
+                    <div class="map-right">
+                        <div class="map-right-text">
+                            <h5>聯絡電話：02-2506 0208</h5>
+                            <h5>營業時間：每日早上06：00 -中午12：00</h5>
+                            <h5>營業地址：台北市中山區五常街53巷35號</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe class="map_rwd"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.0489856456225!2d121.5375679149592!3d25.066328783957225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abfd018c857f%3A0x368d8a76fd30db7f!2z5ZCJ5YCI5pep6aSQ!5e0!3m2!1szh-TW!2stw!4v1637533286914!5m2!1szh-TW!2stw"
+                        width="1125px" height="580px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 以下為footer -->
+    <footer>
+        <section id="footer">
+            <div class="container col-12 d-flex flex-wrap align-items-center">
+                <a data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    class="d-flex justify-content-center align-items-center " href="#">
+                    <h5 class="gotop text-white text-center">
+                        TOP
+                    </h5>
+                </a>
+                <div data-aos="fade-up-right" data-aos-delay="800" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                    class="footer-logo">
+                    <img src="./img/footer/footer-logo.png" alt="">
+                </div>
+                <div data-aos="fade-up" data-aos-delay="1000" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                    class="icon-delivery">
+                    <img src="./img/footer/icon-delivery-01.png" alt="">
+                    <img class="mx-1 mx-md-2 mx-sm-3" src="./img/footer/icon-delivery-02.png" alt="">
+                    <img src="./img/footer/icon-delivery-03.png" alt="">
+                </div>
+                <div data-aos="fade-up-left" data-aos-delay="1200" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                    class="icon-social">
+                    <img src="./img/footer/icon-social-01.png" alt="">
+                    <img class="mx-1 mx-md-2 mx-sm-3" src="./img/footer/icon-social-02.png" alt="">
+                    <img src="./img/footer/icon-social-03.png" alt="">
+                </div>
+            </div>
+            <h5 data-aos="fade-down" data-aos-offset="120" data-aos-delay="600" data-aos-duration="800"
+                data-aos-easing="ease-in-out" class="copy-right text-white">© Jilai All Rights Reserved.</h6>
+
+
+
+        </section>
+
+    </footer>
+
+    </main>
+
+    <!-- 美味承諾, 波浪的 JS 控制點, 是手刻的 -->
+    <script>
+        (function () {
+
+            var unit = 100;
+            var canvas, context, canvas2, context2, height, width, xAxis, yAxis, draw;
+
+            function init() {
+                canvas = document.getElementById("sineCanvas");
+                // 將 Canvas 的寬度與窗口的寬度匹配 
+                canvas.width = document.documentElement.clientWidth;
+                canvas.height = 600;
+                context = canvas.getContext("2d");
+                height = canvas.height;
+                width = canvas.width;
+                xAxis = Math.floor(height / 2);
+                yAxis = 0;
+
+                draw();
+            }
+            function draw() {
+                // 清除畫布繪圖
+                context.clearRect(0, 0, width, height);
+                // 畫波浪（fillcolor, alpha, zoom, delay）
+                drawWave('#9D6C4F', opacity = "0.6", 3, 1, 0,);
+
+                // Update the time and draw again
+                draw.seconds = draw.seconds + .009;
+                draw.t = draw.seconds * Math.PI;
+                setTimeout(draw, 35);
+            };
+            draw.seconds = 0;
+            draw.t = 0;
+
+            function drawWave(fillcolor, alpha, zoom, delay) {
+                context.fillStyle = fillcolor;
+                context.globalAlpha = alpha;
+                // 路徑開始
+                context.beginPath();
+                drawSine(draw.t / 0.5, zoom, delay);
+                // Canvas 右下角的路徑 
+                context.lineTo(width + 10, height);
+                // Canvas 左下角的路徑 
+                context.lineTo(0, height);
+                // 關閉路徑 
+                context.closePath()
+                // 填滿
+                context.fill();
+            }
+
+            function drawSine(t, zoom, delay) {
+                // 水平位置
+                var x = t;
+                var y = Math.sin(x) / zoom;
+                // 將路徑放在起始位置
+                context.moveTo(yAxis, unit * y + xAxis);
+
+                // Loop to draw segments (按寬度繪製波浪)
+                for (i = yAxis; i <= width + 10; i += 10) {
+                    x = t + (-yAxis + i) / unit / zoom;
+                    y = Math.sin(x - delay) / 3;
+                    context.lineTo(i, unit * y + xAxis);
+                }
+            }
+            init();
+        })();
+    </script>
+    <!-- 美味承諾, 堅持品質, N個輪播圖 Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 24,
+            pagination: {
+                el: ".swiper-pagination",
+                // clickable: true,
+            },
+            breakpoints: {
+                // 當屏幕寬度大於等於 540px
+                540: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                // 當屏幕寬度大於等於 768px 
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            },
+            // 插入下方autoplay，把上方的 clickable 拿掉=開啟自動播放
+            autoplay: {
+                delay: 1500,
+                // 1.5秒切換一次
+                stopOnLastSlide: false,
+                // 如果設置爲true，切換到最後一個slide時停止自動切換(loop模式下無效)
+                // disableOnInteraction: false,
+                // User 操作Swiper之後，是否禁止 autoplay。預設：true停止，如果設置爲 false， User 操作swiper之後自動切換不會停止，每次都會重新啓動 autoplay。操作包括觸碰、拖動、點擊 pagination 等。類型：boolean，默認：true。
+
+            },
+        });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- Boostrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
+    <script>
+        (function ($) {
+            $(function () {
+                var agSwiper = $('.swiper-container');
+
+                if (agSwiper.length > 0) {
+
+                    var sliderView = 3;
+                    var ww = $(window).width();
+                    if (ww >= 100) sliderView = 3;
+                    if (ww <= 990) sliderView = 1;
+
+                    var swiper = new Swiper('.swiper-container', {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                        loop: true,
+                        loopedSlides: 16,
+                        speed: 700,
+                        autoplay: true,
+                        autoplayDisableOnInteraction: true,
+                        centeredSlides: true
+                    });
+
+                    $(window).resize(function () {
+                        var ww = $(window).width();
+                        if (ww >= 1700) swiper.params.slidesPerView = 3;
+                        if (ww <= 990) swiper.params.slidesPerView = 1;
+                    });
+
+                    $(window).trigger('resize');
+
+                    var mySwiper = document.querySelector('.swiper-container').swiper;
+
+                    agSwiper.mouseenter(function () {
+                        mySwiper.autoplay.stop();
+                        console.log('slider stopped');
+                    });
+
+                    agSwiper.mouseleave(function () {
+                        mySwiper.autoplay.start();
+                        console.log('slider started again');
+                    });
+                }
+
+            });
+        })(jQuery);
+    </script>
+
+    <script>
+        // 精選菜單區
+        // 盤子轉圈的效果-Part. 01-訂好盤子出現的開始位置與結束位置
+        var jsLogo = document.querySelector('#js-logo');
+        var allMenu = document.querySelector('#allMenu');
+        var contentSpecials = document.querySelector('.contents-specials')
+
+        function checkOffset() {
+            function getRectTop(el) {
+                var rect = el.getBoundingClientRect();
+                return rect.top;
+                // var rect = el.getBoundingClientRect();
+                // el.getBoundingClientRect() 回傳元素的大小，以及其相對於可視範圍 (viewport) 的位置。
+                // return rect.top-回傳從el向上算的值
+            }
+            if (document.body.scrollTop + window.innerHeight < (getRectTop(contentSpecials) + document.body.scrollTop + 1200))
+                jsLogo.style.position = 'absolute';
+            else if ((getRectTop(jsLogo) + document.body.scrollTop) + jsLogo.offsetHeight > (getRectTop(allMenu) + document.body.scrollTop))
+                jsLogo.style.position = 'absolute';
+            // getRectTop(jsLogo) jsLogo元素左上角的位置， document.body.scrollTop通常為0可看網站介紹，jsLogo.offsetHeight-元素的高度
+            else if (document.body.scrollTop + window.innerHeight < (getRectTop(allMenu) + document.body.scrollTop))
+                jsLogo.style.position = 'fixed'; // restore when you scroll up
+            // window.innerHeight-顯示區的高度
+            // jsLogo.innerHTML = document.body.scrollTop + window.innerHeight;
+        }
+
+        document.addEventListener("scroll", function () {
+            checkOffset();
+        });
+
+        // 盤子轉圈的效果-Part. 02-讓盤子轉起來
+        window.onscroll = function () {
+            var theta = document.documentElement.scrollTop / 95 % Math.PI;
+
+            document.getElementById('js-logo').style.transform = 'rotate(' + theta + 'rad)';
+        }
+
+
+        // 精選菜單的卡片
+        var jilaiSpecials = document.querySelector('.jilaiSpecials')
+
+        //使用for迴圈，將商品清單的資訊印在畫面上
+
+        var jilai_specials_product = [
+            {
+                img: './img/05_special_menu/specials-img-01.png',
+                name: '奶油培根德腸麵套餐',
+                content: '香濃法式奶油白醬佐培根德腸',
+                // price: '111',
+                // tag1:'drink'
+            },
+            {
+                img: './img/05_special_menu/specials-img-02.png',
+                name: '厚片套餐',
+                content: '烤的外酥內軟果醬厚片搭配薯條和小熱狗',
+                // price: '222',
+                // tag1:'dessert'
+            },
+            {
+                img: './img/05_special_menu/specials-img-03.png',
+                name: '經典套餐',
+                content: '可口小三明治，配上豬肉薯條的經典選擇',
+                // price: '333',
+                // tag1:'drink',
+                // tag2:'dessert'
+            },
+            {
+                img: './img/05_special_menu/specials-img-04.png',
+                name: '歐姆蛋套餐',
+                content: '濃郁可口起司歐姆蛋，搭配果醬吐司和薯條',
+                // price: '444',
+                // tag1:'food'
+            },
+            {
+                img: './img/05_special_menu/specials-img-05.png',
+                name: '中式套餐',
+                content: '傳統的好味道饕客最愛',
+                // price: '555',
+                // tag1:'food'
+            },
+            {
+                img: './img/05_special_menu/specials-img-06.png',
+                name: '鬆餅套餐',
+                content: '美式圓鬆餅淋上蜂蜜，甜甜好滋味搭配豬肉和薯條',
+                // price: '666',
+                // tag1:'dessert'
+            },
+            {
+                img: './img/05_special_menu/specials-img-07.png',
+                name: '活力組合餐',
+                content: '活力滿滿的幸福早餐，香蒜法國麵包、嫩蛋、生菜沙拉搭配檸檬雞柳',
+                // price: '777',
+                // tag1:'drink'
+            },
+            {
+                img: './img/05_special_menu/specials-img-08.png',
+                name: '蛋餅套餐',
+                content: '口感香酥的脆皮蛋餅，薯餅和地瓜QQ球，三種口味一次滿足',
+                // price: '888',
+                // tag1:'drink'
+            },
+            {
+                img: './img/05_special_menu/specials-img-09.png',
+                name: '總匯套餐',
+                content: '四層總匯吐司營養滿分，加上薯條小點心',
+                // price: '999',
+                // tag1:'drink'
+            },
+            {
+                img: './img/05_special_menu/specials-img-10.png',
+                name: '寶貝兒童餐',
+                content: '果醬小麵包、小熱狗、玉米蛋，孩子們的最愛',
+                // price: '010',
+                // tag1:'drink'
+            },
+            {
+                img: './img/05_special_menu/specials-img-11.png',
+                name: '美式大牛起司堡套餐',
+                content: '厚切大牛的味覺饗宴，就在此刻擁有',
+                // price: '011',
+                // tag1:'drink'
+            },
+            {
+                img: '',
+                name: '',
+                content: '',
+                price: '',
+                // tag1:''
+            }
+        ]
+
+        function show(rule) {
+            jilaiSpecials.innerHTML = ''
+            //將資料庫裡的資訊，導入卡片中(element)( 先做1 )
+            for (let index = 0; index < jilai_specials_product.length; index++) {
+                const element = jilai_specials_product[index];
+                // 在印出來之前先做比較( 過濾 再做2 )
+                if (rule == 'all') {
+                    jilaiSpecials.innerHTML += ` 
+                <div class="card col-lg-4 col-md-6 col-sm-12 text-center mb-3">
+                    <img src="${element.img}" alt="">
+                    <h4 class="name font-weight-bolder">${element.name}</h6>
+                    <div class="ingredients mb-2 mx-auto" style="width: 70%;">${element.content}</div>
+                </div>`
+                }
+            }
+        }
+        // 先把價格拿掉若要加上架格再加上下方這列
+        // <div class="price font-weight-bolder">${element.price}</div> 
+
+
+        // 依按鈕來濾出同分類的產品並顯示(後做)
+        show('all')
+    </script>
+
+    <!-- Bootstrap Jquery, JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
