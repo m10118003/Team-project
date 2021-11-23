@@ -81,7 +81,7 @@ padding: 0;
       border-radius: 0.5px;
       opacity: 1 !important;
       // margin-left: -16px;
-      padding: 0 45px 0;
+      padding: 0 ;
     }
 
     // a:hover {
@@ -107,16 +107,16 @@ padding: 0;
     margin: 0 auto 20px;
     // 變漢堡排時, 下方選單列顏色
     // 選單列顏色
-    .collapse { 
+    .navbar-nav { 
       // 選單列長度
       a {
         font-size: 1.5rem !important;
         margin-left: 1rem;
       }
       // 漢堡排右方白條
-      .nav-about {
-        border-right: 2px solid white !important;
-      }
+      // .nav-about {
+      //   border-right: 2px solid white !important;
+      // }
     }
   }
   .nav-link {
@@ -129,61 +129,78 @@ padding: 0;
   .top-nav-wrap {
     // opacity: 0.75;
     transition: 0s;
-    margin: 0 auto 20px;
+    // margin: 0 auto 20px;
     // 變漢堡排時, 下方選單列顏色
     // 選單列顏色
-    .collapse {
-      
-      background-color: hsla(0, 0%, 0%, 0.5);
-      border-radius: 5px;
+    .navbar-nav {      
+      // background-color: hsla(0, 0%, 0%, 0.5);
+      // border-radius: px;
       transition: 0.5s;
       z-index: 2;
       // 選單列長度
       a {
-        font-size: 1.5rem !important;
-        line-height: 50px;
-      }
-      // 漢堡排右方白條
-      .nav-about {
-        border-right: 2px solid white !important;
-      }
-    }
-  }
-}
-@media (max-width: 850px) {
-  .top-nav-wrap {
-    .collapse {
-      a {
-        font-size: 1.5rem !important;
-        line-height: 50px;
-        letter-spacing: 1px;
-        border: 0 !important;
-        margin-left: 0rem;
-      }
-      // 漢堡排右方白條
-      .nav-about {
-        border-right: 0 !important;
-      }
-      .nav-about-us {
-        border-right: 0 !important;
-      }
-    }
-  }
-}
-@media (max-width: 575px) {
-  .top-nav-wrap {
-    .collapse {
-      a {
-        display: flex;
-        justify-content: center;
         font-size: 1rem !important;
-        line-height: 40px;
-        letter-spacing: 0px;
-        margin-left: 0rem;
+        line-height: 10px;
+        padding: 0.5rem;
+      }
+      // 漢堡排右方白條
+      // .nav-about-us {
+      //   border-right: 2px solid white !important;
+      // }
+    }
+  }
+}
+@media (max-width: 540px) {
+  // 未變版時選單列顏色
+  .top-nav-wrap {
+    // opacity: 0.75;
+    transition: 0s;
+    // margin: 0 auto 20px;
+    // 變漢堡排時, 下方選單列顏色
+    // 選單列顏色
+    .navbar-nav {
+      a {
+        font-size: 0.5rem !important;
       }
     }
   }
 }
+@media (max-width: 440px) {
+  // 未變版時選單列顏色
+  .top-nav-wrap {
+    // opacity: 0.75;
+    transition: 0s;
+    // margin: 0 auto 20px;
+    // 變漢堡排時, 下方選單列顏色
+    // 選單列顏色
+    .navbar-nav {
+      padding: 6vmin;
+      a {
+        font-size: 18px !important;
+        line-height: 20px !important;
+        padding: 5px;    
+      }              
+    }
+  }
+}  
+
+@media (max-width: 360px) {
+  // 未變版時選單列顏色
+  .top-nav-wrap {
+    // opacity: 0.75;
+    transition: 0s;
+    // margin: 0 auto 20px;
+    // 變漢堡排時, 下方選單列顏色
+    // 選單列顏色
+    .navbar-nav {
+      padding: 5vmin;
+      a {
+        font-size: 14px !important;
+        line-height: 16px !important;
+      }
+    }
+  }
+} 
 
 #about-jilai {
   margin: 5vh 0 0 !important;
@@ -828,6 +845,22 @@ padding: 0;
 @media only screen and (max-width: 540px) {
   canvas {
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #canvas-container {  
+    // 美味承諾文字寬, 外距
+    .text-cafe {
+        
+      p.txt {
+        font-size: 16px !important;      
+        margin: 10px 0 0 0px;
+        padding: 5px;
+        width: 650px;
+      }
+    
+    }
   }
 }
 
@@ -1596,29 +1629,38 @@ padding: 0;
   }
 }
 @media screen and (max-width: 860px){
-  .map {     
-    .map_rwd {
-      width: 92% !important;
+  .map-container {
+    width: 90% !important;  
+    .map {     
+      .map_rwd {
+        width: 92% !important;
+      }
     }
-  }
+  }  
 }
 @media screen and (max-width: 540px){
-  .map-left {     
+  .map-container {
+    width: 90% !important;  
+    .map-left {     
       margin-left: -9vmin !important;    
-  }
-  .map {     
-    .map_rwd {
-      width: 87% !important;
+    }
+    .map {     
+      .map_rwd {
+        width: 87% !important;
+      }
     }
   }
 }
 @media screen and (max-width: 360px){
-  .map-left {     
-      margin-left: -20vmin !important;    
-  }
-  .map {     
-    .map_rwd {
-      width: 87% !important;
+  .map-container {
+    width: 90% !important;  
+    .map-left {     
+        margin-left: -20vmin !important;    
+    }
+    .map {     
+      .map_rwd {
+        width: 90% !important;
+      }
     }
   }
 }
