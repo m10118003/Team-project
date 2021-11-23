@@ -467,12 +467,6 @@ body {
   }
 }
 
-@media all and (max-width: 360px) {
-  .store-intro-container {
-    height: 480px !important;
-  }
-}
-
 #canvas-container {
   overflow: hidden;
   margin-top: 50px;
